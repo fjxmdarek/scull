@@ -1,6 +1,6 @@
-obj-m := scull.o
+obj-m := skull.o
 
-scull-objs := scull_dev_register.o scull_open_release.o scull_read_write.o scull_mod.o
+skull-objs := scull.o scull_dev_register.o scull_open_release.o scull_read_write_seek.o scull_helpers.o
 
 KDIR := ~/kernel/SSD2351
 

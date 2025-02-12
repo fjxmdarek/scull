@@ -1,6 +1,4 @@
 #include "scull.h"
-#include <linux/module.h>
-
 
 static void scull_setup_cdev(struct scull_dev *dev, int index)
 {
@@ -21,13 +19,13 @@ static int __init scull_init_module(void)
     
     if (scull_major) {
         dev = MKDEV(scull_major, 0);
-        result = register_chrdev_region(dev, scull_nr_devs, "scull");
+        result = register_chrdev_region(dev, scull_nr_devs, "skull");
     } else {
-        result = alloc_chrdev_region(&dev, 0, scull_nr_devs, "scull");
+        result = alloc_chrdev_region(&dev, 0, scull_nr_devs, "skull");
         scull_major = MAJOR(dev);
     }
     if (result < 0) {
-        printk(KERN_WARNING "scull: can't get major %d\n", scull_major);
+        printk(KERN_WARNING "skull: can't get major %d\n", scull_major);
         return result;
     }
     
@@ -39,7 +37,7 @@ static int __init scull_init_module(void)
         scull_setup_cdev(&scull_devices[i], i);
     }
     
-    printk(KERN_INFO "scull: registered with major number %d\n", scull_major);
+    printk(KERN_INFO "skull: registered with major number %d\n", scull_major);
     return 0;
 }
 
@@ -50,7 +48,7 @@ static void __exit scull_cleanup_module(void)
         cdev_del(&scull_devices[i].cdev);
     }
     unregister_chrdev_region(MKDEV(scull_major, 0), scull_nr_devs);
-    printk(KERN_INFO "scull: module unloaded\n");
+    printk(KERN_INFO "skull: module unloaded\n");
 }
 
 

@@ -1,0 +1,1 @@
+cmd_/home/zhangxiangh/test/skull/scull.mod := printf '%s\n'   scull_dev_register.o scull_open_release.o scull_read_write.o scull_mod.o | awk '!x[$$0]++ { print("/home/zhangxiangh/test/skull/"$$0) }' > /home/zhangxiangh/test/skull/scull.mod

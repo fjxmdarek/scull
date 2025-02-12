@@ -1,0 +1,1 @@
+cmd_/home/zhangxiangh/test/skull/scull.ko := arm-abk_ssc0-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o /home/zhangxiangh/test/skull/scull.ko /home/zhangxiangh/test/skull/scull.o /home/zhangxiangh/test/skull/scull.mod.o;  true

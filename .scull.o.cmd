@@ -1,0 +1,1 @@
+cmd_/home/zhangxiangh/test/skull/scull.o := arm-abk_ssc0-linux-uclibcgnueabihf-ld  -EL -z noexecstack --no-warn-rwx-segments    -r -o /home/zhangxiangh/test/skull/scull.o @/home/zhangxiangh/test/skull/scull.mod 
